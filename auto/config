@@ -1,0 +1,18 @@
+#!/bin/sh
+
+lb config noauto \
+--mode debian \
+--system normal \
+--binary-image iso \
+--architecture amd64 \
+--archive-areas "main contrib non-free" \
+--linux-package "linux-image linux-headers" \
+--debian-installer live \
+--debian-installer-distribution bullseye \
+--debian-installer-gui false \
+--distribution-binary bullseye \
+--distribution-chroot bullseye \
+--firmware-binary true \
+--firmware-chroot true
+
+"${@}"
