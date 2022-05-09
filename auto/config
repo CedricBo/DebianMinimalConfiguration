@@ -6,6 +6,7 @@ lb config noauto \
 --binary-filesystem ext4 \
 --binary-image iso \
 --debconf-frontend noninteractive \
+--debootstrap-options "--variant=minbase" \
 --debian-installer cdrom \
 --debian-installer-distribution bullseye \
 --debian-installer-gui false \
